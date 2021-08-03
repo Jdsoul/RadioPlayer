@@ -28,10 +28,10 @@ from config import Config
 
 CHAT=Config.CHAT
 msg=Config.msg
-HOME_TEXT = "👋🏻 **Hi [{}](tg://user?id={})**,\n\nI'm **Radio Player V3.0** \nI Can Play Radio / Music / YouTube Live In Channel & Group 24x7 Nonstop. Made with ❤️ By @AsmSafone 😉!"
+HOME_TEXT = "👋🏻 **Hi [{}](tg://user?id={})**,\n\nI'm **Radio Player V3.0** \nI Can Play Radio / Music / YouTube Live In Channel & Group 24x7 Nonstop. Made with ❤️ By @starkindusttri 😉!"
 HELP_TEXT = """
 🎧 **Need Help ?** 
-__(Join @SafoTheBot For Support)__
+__(Join @mwcinema For Support)__
 
 🏷️ **Common Commands** :
 
@@ -59,7 +59,7 @@ __(Join @SafoTheBot For Support)__
 \u2022 `/restart` - restart the bot
 
 © **Powered By** : 
-**@AsmSafone | @SafoTheBot** 👑
+**@mwcinema | @mwcinema** 👑
 """
 
 
@@ -79,7 +79,7 @@ async def start(client, message):
             ]
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
-    m=await message.reply_photo(photo="https://telegra.ph/file/4e839766d45935998e9c6.jpg", caption=HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
+    m=await message.reply_photo(photo="https://telegra.ph/file/23829fa8fac5c98321e93.jpg", caption=HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
     await mp.delete(m)
     await mp.delete(message)
 
@@ -107,7 +107,7 @@ async def show_help(client, message):
     await mp.delete(message)
 @Client.on_message(filters.command(["restart", f"restart@{USERNAME}"]) & filters.user(Config.ADMINS) & (filters.chat(CHAT) | filters.private))
 async def restart(client, message):
-    await message.reply_text("🔄 **Restarting... Join @AsmSafone!**")
+    await message.reply_text("🔄 **Restarting... Join @mwcinema!**")
     await mp.delete(message)
     process = FFMPEG_PROCESSES.get(CHAT)
     if process:
