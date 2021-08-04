@@ -28,10 +28,10 @@ from config import Config
 
 CHAT=Config.CHAT
 msg=Config.msg
-HOME_TEXT = "👋🏻 **Hi [{}](tg://user?id={})**,\n\nI'm **Radio Player V3.0** \nI Can Play Radio / Music / YouTube Live In Channel & Group 24x7 Nonstop. Made with ❤️ By @AsmSafone 😉!"
+HOME_TEXT = "👋🏻 **Hi [{}](tg://user?id={})**,\n\nI'm **Radio Player V3.0** \nI Can Play Radio / Music / YouTube Live In Channel & Group 24x7 Nonstop. Made with ❤️ By @starkindusttri 😉!"
 HELP_TEXT = """
 🎧 **Need Help ?** 
-__(Join @SafoTheBot For Support)__
+__(Join @mwcinema For Support)__
 
 🏷️ **Common Commands** :
 
@@ -59,7 +59,7 @@ __(Join @SafoTheBot For Support)__
 \u2022 `/restart` - restart the bot
 
 © **Powered By** : 
-**@AsmSafone | @SafoTheBot** 👑
+**@AsmSafone | @starkindusttri** 👑
 """
 
 
@@ -107,7 +107,7 @@ async def show_help(client, message):
     await mp.delete(message)
 @Client.on_message(filters.command(["restart", f"restart@{USERNAME}"]) & filters.user(Config.ADMINS) & (filters.chat(CHAT) | filters.private))
 async def restart(client, message):
-    await message.reply_text("🔄 **Restarting... Join @AsmSafone!**")
+    await message.reply_text("🔄 **Restarting... Join @mwcinema!**")
     await mp.delete(message)
     process = FFMPEG_PROCESSES.get(CHAT)
     if process:
